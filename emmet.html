@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 문제 1 : id="nav"를 가진 nav 태그 안에 ul이 있고, 그 안에 li 5개가 들어있으며, 각 li 안에는 a 태그가 들어있고, 그 안에는 "Menu1" ~ "Menu5" 텍스트가 순서대로 들어가야 함 -->
+    <nav id="nav">
+        <ul>
+            <li><a href="">Menu1</a></li>
+            <li><a href="">Menu2</a></li>
+            <li><a href="">Menu3</a></li>
+            <li><a href="">Menu4</a></li>
+            <li><a href="">Menu5</a></li>
+        </ul>
+    </nav>
+
+    <!-- 문제 2 : class="card-wrap"인 div 안에, class="card"인 div 3개가 반복되고, 각 card 안에는 img, h3{제목}, p{내용}이 순서대로(형제 관계로) 들어가야 함 -->
+     .card-ward>.card*3>img+h3{제목}+p{내용}
+     <div class="card-wrap">
+        <div class="card">
+            <img src="" alt="">
+            <h3>제목</h3>
+            <p>내용</p>
+        </div>
+        <div class="card">
+            <img src="" alt="">
+            <h3>제목</h3>
+            <p>내용</p>
+        </div>
+        <div class="card">
+            <img src="" alt="">
+            <h3>제목</h3>
+            <p>내용</p>
+        </div>
+    </div>
+
+    <!--파이널 문제 : 단 한 줄의 Emmet 문장으로 작성하시오-->
+    #div-id.div-class>ol#ol-id>li#li-list${게시글-$}*10
+    <div id="div-id" class="div-class">
+        <ol id="ol-id">
+            <li id="li-list1">게시글-1</li>
+            <li id="li-list2">게시글-2</li>
+            <li id="li-list3">게시글-3</li>
+            <li id="li-list4">게시글-4</li>
+            <li id="li-list5">게시글-5</li>
+            <li id="li-list6">게시글-6</li>
+            <li id="li-list7">게시글-7</li>
+            <li id="li-list8">게시글-8</li>
+            <li id="li-list9">게시글-9</li>
+            <li id="li-list10">게시글-10</li>
+        </ol>
+    </div>
+</body>
+</html>
