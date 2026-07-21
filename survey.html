@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <title>선택·그룹 태그 실습</title>
+</head>
+<body>
+   <h2>수강 신청 설문</h2>
+   <form action="" method="post">
+
+      <fieldset>
+         <legend>기본 정보</legend>
+         <label for="name">이름 : </label>
+         <input type="text" id="name" name="name">
+      </fieldset>
+
+      <fieldset>
+         <legend>수강 희망 과목</legend>
+         <select name="course">
+            <optgroup label="프론트엔드">
+               <option value="html">HTML/CSS</option>
+               <option value="js">자바스크립트</option>
+               <option value="react">리액트</option>
+            </optgroup>
+            <optgroup label="백엔드">
+               <option value="node">Node.js</option>
+               <option value="spring">스프링</option>
+            </optgroup>
+         </select>
+      </fieldset>
+
+      <fieldset>
+         <legend>건의 사항</legend>
+         <!-- 나쁜 예 : 들여쓰기가 입력창에 공백으로 들어감 -->
+         <!--
+         <textarea name="memo">
+            여기에 입력하세요
+         </textarea>
+         -->
+         <!-- 좋은 예 : 붙여 쓰기 -->
+         <textarea name="memo" rows="5" cols="40">여기에 입력하세요</textarea>
+      </fieldset>
+
+      <input type="submit" value="제출">
+   </form>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <title>입력 태그 실습</title>
+</head>
+<body>
+   <h2>회원가입</h2>
+   <form action="" method="post">
+      <!-- label의 for = input의 id -->
+      <label for="userid">아이디 : </label>
+      <input type="text" id="userid" name="userid"><br><br>
+
+      <label for="userpw">비밀번호 : </label>
+      <input type="password" id="userpw" name="userpw"><br><br>
+
+      <!-- radio : name이 같아야 하나만 선택됨 -->
+      <p>성별 선택 :</p>
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="male">남성</label>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">여성</label><br><br>
+
+      <!-- checkbox : 여러 개 선택 가능 -->
+      <p>관심 분야 (복수 선택 가능) :</p>
+      <input type="checkbox" id="fe" name="interest" value="frontend">
+      <label for="fe">프론트엔드</label>
+      <input type="checkbox" id="be" name="interest" value="backend">
+      <label for="be">백엔드</label><br><br>
+
+      <input type="submit" value="가입하기">
+      <input type="reset" value="다시 쓰기">
+   </form>
+</body>
+</html>

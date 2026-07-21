@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>CSS3 Selector Basic</title>
+   <style>
+      /* 자손 선택자 : nav 안의 h1까지 빨갛게 물듦 */
+      #header h1  { color: red; }
+      #section h1 { color: orange; }
+
+      /* 자식 선택자로 바꾸면 직계만 적용됨
+      #header>h1  { color: red; }
+      #section>h1 { color: orange; }
+      */
+   </style>
+</head>
+<body>
+   <div id="header">
+      <h1 class="title">Lorem ipsum</h1>
+      <div id="nav">
+         <h1>Navigation</h1>
+      </div>
+   </div>
+   <div id="section">
+      <h1 class="title">Lorem ipsum</h1>
+      <p>Lorem ipsum dolor sit amet.</p>
+   </div>
+</body>
+</html>
