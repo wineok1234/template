@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <title>이미지와 그룹핑</title>
+   <style>
+      .card { border: 1px solid gray; padding: 10px; }
+      .highlight { color: red; }
+   </style>
+</head>
+<body>
+   <div class="card">
+      <img src="cat.jpg" alt="소파에서 잠든 고양이">
+      <p>우리 집 고양이는 <span class="highlight">하루 16시간</span>을 잔다.</p>
+   </div>
+
+   <!-- 이미지 경로를 일부러 틀리게 -->
+   <img src="no-image.jpg" alt="이미지가 없으면 이 글이 표시됩니다">
+
+   <!-- 장식용 이미지 : alt를 빈 값으로 -->
+   <img src="decoration-line.png" alt="">
+</body>
+</html>

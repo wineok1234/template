@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>가상 클래스 확인 실습</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 40px;
+    }
+
+    .box {
+      display: inline-block;
+      padding: 20px 40px;
+      margin: 10px;
+      background-color: lightgray;
+      border: 3px solid gray;
+      border-radius: 8px;
+      font-size: 20px;
+      text-decoration: none;
+      color: black;
+    }
+
+    /* 마우스를 올렸을 때 */
+    .box:hover {
+      background-color: gold;
+      border-color: orange;
+    }
+
+    /* 클릭하고 있는 동안 */
+    .box:active {
+      background-color: tomato;
+      color: white;
+    }
+
+    /* 포커스를 받았을 때 (Tab 키 또는 클릭) */
+    .box:focus {
+      outline: 4px dashed royalblue;
+      background-color: lightblue;
+    }
+
+    /* 방문한 적 있는 링크 */
+    a.box:visited {
+      color: purple;
+    }
+  </style>
+</head>
+<body>
+  <h1>가상 클래스 실습</h1>
+  <p>개발자 도구(F12) → 요소 선택 → 스타일 탭의 <strong>:hov</strong> 버튼으로 각 상태를 강제 적용해 보세요.</p>
+
+  <a href="https://www.naver.com" class="box">링크 (a)</a>
+  <button class="box">버튼 (button)</button>
+  <input type="text" class="box" placeholder="입력창 (input)" />
+
+  <hr />
+  <ol>
+    <li><strong>:hover</strong> 체크 → 마우스 없이 노란색으로 변하는지</li>
+    <li><strong>:active</strong> 체크 → 빨간색으로 변하는지</li>
+    <li><strong>:focus</strong> 체크 → 파란 점선 테두리가 생기는지</li>
+    <li><strong>:visited</strong> → 링크 글자가 보라색인지 (방문 이력 필요)</li>
+  </ol>
+</body>
+</html>
