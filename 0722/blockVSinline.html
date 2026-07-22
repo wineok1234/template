@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box { width: 100px; height: 50px; background: skyblue; margin: 5px; }
+        .b1  { display: block; }         /* 줄바꿈됨, 크기 적용 */
+        .b2  { display: inline; }        /* 옆으로, width/height 무시 */
+        .b3  { display: inline-block; }  /* 옆으로, 크기 적용 */
+</style>
+</head>
+<body>
+    <span class="box b1">block</span>
+    <span class="box b2">inline</span>
+    <span class="box b3">inline-block</span>
+</body>
+</html>

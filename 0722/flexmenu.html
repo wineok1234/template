@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            height: 60px;
+            background-color:#D1CF76;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .container > ul{
+                color: #33331D;
+                text-align: center;
+                font-size: 16px;
+        }
+        .home-link::before {
+            content: "";  
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23000000'%3E%3Cpath d='M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body>
+    <ul class="container" style="list-style-type: none; padding-left: 0;">
+        <li class="home-link"></li>
+        <li>Home</li>
+        <li>인사말</li>
+        <li>제품</li>
+        <li>고객센터</li>
+        <li>로그인</li>
+    </ul>
+</body>
+</html>

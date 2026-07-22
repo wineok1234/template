@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <style>
+    .wrap {
+        background-color: gainsboro;
+        width: 700px;
+        height: 500px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .wrap>.left-side {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+    }
+    .wrap>.center {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .wrap>.right-side {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        align-items: end;
+    }
+    .wrap>div>div {
+        color: white;
+        line-height: 100px;
+        text-align: center;
+        font-size: 40px;
+        width: 100px;
+        height: 100px;
+    }
+    .blue {
+        background-color: blue;
+    }
+    .pink {
+        background-color: pink;
+    }
+    .yellow {
+        background-color: yellow;
+    }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="left-side">
+            <div class="blue">A</div>
+            <div class="pink">B</div>
+            <div class="yellow">C</div>
+        </div>
+        <div class="center">
+            <div class="blue">D</div>
+            <div class="yellow">E</div>
+        </div>
+        <div class="right-side">
+            <div class="blue">F</div>
+            <div class="pink">G</div>
+            <div class="yellow">H</div>
+        </div>
+    </div>
+</body>
+</html>
