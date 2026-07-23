@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap 실습</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="accordion" id="myAccordion">
+
+    <!-- 첫 번째 항목 -->
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#item1">
+            Q. 배송은 얼마나 걸리나요?
+        </button>
+        </h2>
+        <div id="item1" class="accordion-collapse collapse show" data-bs-parent="#myAccordion">
+        <div class="accordion-body">
+            평균 2~3일 소요됩니다.
+        </div>
+        </div>
+    </div>
+
+    <!-- 두 번째 항목 -->
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#item2">
+            Q. 환불이 가능한가요?
+        </button>
+        </h2>
+        <div id="item2" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+        <div class="accordion-body">
+            수령 후 7일 이내 환불 가능합니다.
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>

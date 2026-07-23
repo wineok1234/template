@@ -4,146 +4,176 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HongGilDong Page</title>
-        <style>
+    <style>
         .container {
-            width: 120px;
+            width: 150px;
             background-color: yellow;
-            padding: 70px 0px;
+            padding: 100px 0px;
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
+            justify-content: space-evenly;
             align-items: center;
-            gap : 70px;
-            flex-shrink: 0; /*가로*/
+            gap : 100px;
+            flex-shrink: 0;
         }
         .container > ul{
                 color: white;
                 text-align: center;
                 font-size: 16px;
         }
-        .home-link::before {
-            content: "";  
-            display: inline-block;
-            width: 30px;
-            height: 30px;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23000000'%3E%3Cpath d='M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z'/%3E%3C/svg%3E");
+        li a:hover {
+            background-color: white;
         }
-        #pageone {
+        main { display: flex }
+        section { flex: 1; }
+        #pageone { margin-top: 0px; }
+        #pageone h1 { 
             font-family: 'EbsHunminjeongeum';
             writing-mode: vertical-lr;
-            flex: 1; /*가로*/
+            display: inline-block;
+            height: 400px;
+            margin: 0px; 
         }
-        #pageone img { width: 50%; height: 50%; display: block;}
+        #pageone img { width: 80%; height: 80%; }
         @font-face {
             font-family: 'EbsHunminjeongeum';
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/EBSHunminjeongeum.woff') format('woff');
             font-weight: normal;
             font-display: swap;
         }
+        header {
+            width: 100%;
+            max-width: 700px;
+            margin: 0px auto 20px;
+        }
+        article,
+        footer {
+            width: 100%;
+            max-width: 700px;
+            margin: 400px auto 20px;
+        }
         table, th, td { border: 1px solid black; border-collapse: collapse; }
-        th, td { padding: 8px; }
+        th, td { padding: 8px; text-align: center; }
+        input:not([type="checkbox"]):not([type="radio"]),
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
     </style>
 </head>
 <link rel="icon" type="image/x-icon" href="./favicon.ico">
 <body>
     <header>
-        <nav>
-            <ul class="container" style="list-style-type: none; padding-left: 0;">
-                <li class="home-link"><a href="#pageone"></a></li>
-                <li><a href="#pagetwo">자기소개</a></li>
-                <li><a href="#pagethree">eBook 예약</a></li>
-                <li><a href="#pagefour">Q&A</a></li>
-                <li><a href="#pagefive">참고사이트</a></li>
-            </ul>
-        </nav>
+        <p>ⓒHongGilDong Company</p>
     </header>
     <main>
-        <article id="pageone">
-            <h1>홍길동 웹페이지에</h1>
-            <h1>오신 것을 환영합니다</h1>
-            <img src="HongGilDong.jpg" alt="홍길동사진">
-        </article>
-        <article id="pagetwo">
-            <h2>홍길동 자기소개서</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th scope="col"></th>
-                        <th scope="col">소설 <홍길동전></th>
-                        <th scope="col">역사 속 실존 인물</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">시대</th> 
-                        <td>조선 세종대왕 시절</td>
-                        <td>조선 연산군 시절</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">나이</th> 
-                        <td>10~20대</td>
-                        <td>50대~60대 (체포 당시 약 만 57세 추정)</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">성격</th>
-                        <td>민중의 대변자, 도술을 부리는 영웅</td>
-                        <td>왕실 및 양반 기득권층을 위협했던 대형 도적</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">배경</th>
-                        <td>이조판서의 서자</td>
-                        <td>명문가 양반가문 출신(서얼 여부 불확실)</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">주요활동</th> 
-                        <td>의적 패거리 결성,탐관오리 응징</td>
-                        <td>관가에 드나들며 강도질 감행</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">결말</th>
-                        <td>조선을 떠나 ‘율도국’ 왕 등극</td>
-                        <td>1500년 의금부에 체포 및 처형</td>
-                    </tr>
-                </tbody>
-            </table>
-        </article>
-        <article id="pagethree">
-            <h2>eBook 예약 신청서</h2>
-            <form action="" method="get">
-                <label for="name">이름* </label>
-                <input type="text" id="name" placeholder="이름을 입력하세요"><br><br>
-            
-                <label for="pw">비밀번호* </label>
-                <input type="password" id="pw" placeholder="비밀번호를 작성해주세요"><br><br>
+        <aside>
+            <nav>
+                <ul class="container" style="list-style-type: none; padding-left: 0;">
+                    <li><a href="#pageone">HOME</a></li>
+                    <li><a href="#pagetwo">자기소개</a></li>
+                    <li><a href="#pagethree">eBook 예약</a></li>
+                    <li><a href="#pagefour">Q&A</a></li>
+                    <li><a href="#pagefive">참고사이트</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <section>
+            <article id="pageone">
+                <h1>홍길동 웹페이지에</h1>
+                <h1>오신 것을 환영합니다</h1>
+                <img src="HongGilDong.jpg" alt="홍길동 사진">
+            </article>
+            <article id="pagetwo">
+                <h2><mark>홍길동 자기소개서</mark></h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">소설 <홍길동전></th>
+                            <th scope="col">역사 속 실존 인물</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">이름</th> 
+                            <td colspan="2">홍길동</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">나이</th> 
+                            <td>10~20대</td>
+                            <td>50대~60대 (체포 당시 약 만 57세 추정)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">신분</th>
+                            <td>이조판서의 서자</td>
+                            <td>명문가 양반가문 출신(서얼 여부 불확실)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">시대</th> 
+                            <td>조선 세종대왕 시절</td>
+                            <td>조선 연산군 시절</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">주요활동</th> 
+                            <td>의적 패거리 결성, 탐관오리 응징</td>
+                            <td>관가에 드나들며 강도질 감행</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">평가</th>
+                            <td>민중의 대변자, 도술을 부리는 영웅</td>
+                            <td>왕실 및 양반 기득권층을 위협했던 대형 도적</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">결말</th>
+                            <td>조선을 떠나 ‘율도국’ 왕 등극</td>
+                            <td>1500년 의금부에 체포 및 처형</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+            <article id="pagethree">
+                <h2><mark>eBook 예약 신청서</mark></h2>
+                <form action="" method="get">
+                    <label for="name">이름* </label>
+                    <input type="text" id="name" placeholder="이름을 입력하세요"><br><br>
+                
+                    <label for="pw">비밀번호* </label>
+                    <input type="password" id="pw" placeholder="비밀번호를 작성해주세요"><br><br>
 
-                <p>책 종류* </p>
-                <input type="radio" id="novel" name="book" value="novel">
-                <label for="novel">소설</label>
-                <input type="radio" id="history" name="book" value="history">
-                <label for="history">역사책</label><br><br>
+                    <p>책 종류* </p>
+                    <input type="radio" id="novel" name="book" value="novel">
+                    <label for="novel">소설</label>
+                    <input type="radio" id="history" name="book" value="history">
+                    <label for="history">역사책</label><br><br>
 
-                <label for="email">이메일* </label>
-                <input type="text" id="email" placeholder="예: gildonghong@example.com"><br><br>
+                    <label for="email">이메일* </label>
+                    <input type="text" id="email" placeholder="예: gildonghong@example.com"><br><br>
 
-                <p>입력 사항 </p>
-                <textarea name="memo" rows="5" cols="40" placeholder="요청 사항"></textarea>
+                    <p>입력 사항 </p>
+                    <textarea name="memo" rows="5" cols="40" placeholder="요청 사항"></textarea><br><br>
 
-                <input type="submit" value="완료">
-            </form>
-        </article>
-        <article id="pagefour">
-            <h2>Q&A</h2>
-            <a href="mailto:teacher@example.com">홈페이지 담당자에게 메일 보내기</a><br>
-            <a href="tel:010-0000-0000">홈페이지 담당자에게 전화 걸기</a>
-        </article>
-        <article id="pagefive">
-            <h2>참고사이트</h2>
-            <ol type="I">
-                <li><a href="https://encykorea.aks.ac.kr/Article/E0063994" target="_blank">한국민족문화대백과사전</a></li>
-                <li><a href="https://ko.wikipedia.org/wiki/%ED%99%8D%EA%B8%B8%EB%8F%99_(%EC%A1%B0%EC%84%A0)" target="_blank">위키백과</a></li>
-                <li><a href="https://www.jangseong.go.kr/home/honggildong" target="_blank">장성군 홍길동테마파크</a></li>
-            </ol>
-        </article>
+                    <input type="submit" value="완료">
+                </form>
+            </article>
+            <article id="pagefour">
+                <h2><mark>Q&A</mark></h2>
+                <span>📧</span>
+                <a href="mailto:gildonghong@example.com">홈페이지 담당자에게 메일 보내기</a><br>
+                <span>📞</span>
+                <a href="tel:010-2026-0722">홈페이지 담당자에게 전화 걸기</a>
+            </article>
+            <article id="pagefive">
+                <h2><mark>참고사이트</mark></h2>
+                <ol type="I">
+                    <li><a href="https://encykorea.aks.ac.kr/Article/E0063994" target="_blank">한국민족문화대백과사전</a></li>
+                    <li><a href="https://ko.wikipedia.org/wiki/%ED%99%8D%EA%B8%B8%EB%8F%99_(%EC%A1%B0%EC%84%A0)" target="_blank">위키백과</a></li>
+                    <li><a href="https://www.jangseong.go.kr/home/honggildong" target="_blank">장성군 홍길동테마파크</a></li>
+                </ol>
+            </article>
+        </section>
+        <aside></aside>
     </main>
     <footer>
         <p>ⓒHongGilDong Company</p>
