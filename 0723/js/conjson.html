@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="heros">
+        <ul>
+            <li id="hero1"></li>
+            <li id="hero2"></li>
+            <li id="hero3"></li>
+        </ul>
+        </div>
+
+        <script>
+        const jsonUrl = "https://jwonchi.github.io/kopoclass/JSON/supJson.json";
+
+        // fetch API 로 JSON 파일 가져오기
+        fetch(jsonUrl)
+            .then((response) => {
+            // 응답을 JSON 으로 변환
+            return response.json();
+            })
+            .then((data) => {
+            // 변환된 JSON 객체 사용
+            const divLi1 = document.getElementById("hero1");
+            const divLi2 = document.getElementById("hero2");
+            const divLi3 = document.getElementById("hero3");
+
+            divLi1.innerHTML = `<strong>첫 번째 영웅:</strong> ${data.members[0].name}`;
+            divLi2.innerHTML = `<strong>두 번째 영웅:</strong> ${data.members[1].name}`;
+            divLi3.innerHTML = `<strong>세 번째 영웅:</strong> ${data.members[2].name}`;
+            })
+            .catch((error) => {
+            // 오류 처리
+            console.error("JSON 파일을 가져오는 데 실패했습니다.", error);
+            });
+        </script>
+    </body>
+</html>
