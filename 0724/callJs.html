@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JS 호출 테스트</h1>
+
+    <button id="btn1">Click Me</button>
+    <button id="btn2">Click Me</button>
+    <button id="btn3" onclick="handleClick()">Click Me</button>
+
+    <script>
+        const btn1 = document.getElementById("btn1");
+        btn1.addEventListener("click", () => {
+            alert("클릭됨1");
+        });
+
+        const btn2 = document.getElementById("btn2");
+        btn2.onclick = () => {
+            alert("클릭됨2");
+        };
+
+        function handleClick() {
+            alert("클릭됨3");
+        }
+    </script>
+</body>
+</html>
